@@ -28,7 +28,7 @@
 
 
 ## 使用方法
-1. **下载源文件**：点击[此处](https://github.com/Contralitary/MEP-ALUF-Thesis/archive/refs/heads/main.zip)或点击文件列表上方的**Code** > **Download ZIP**
+1. **下载源文件**：点击[此处](https://github.com/Contralitary/ALUF-MEP-Thesis/archive/refs/heads/main.zip)或点击文件列表上方的**Code** > **Download ZIP**
 2. 安装 LaTeX 发行套件和编辑器。  
 	 - **LaTeX 发行套件：[MiKTeX](https://miktex.org/download) 或 [TeX Live](https://tug.org/texlive/)
 	 - **编辑器：[TeXstudio](https://www.texstudio.org/) 或 [Kile](https://kile.sourceforge.io/download.php)
@@ -47,4 +47,4 @@
 
 
 ## 开源许可证
-[LPPL-1.3c license](https://github.com/Contralitary/MEP-ALUF-Thesis/blob/main/LICENSE).
+[LPPL-1.3c license](./LICENSE).
