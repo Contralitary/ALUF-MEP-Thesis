@@ -36,7 +36,7 @@ This is certainly a far-from-perfect template since I am a newbie at LaTeX too. 
 	- **TeXstudio**: **Options** menu > **Root Document** > **Set Current Document As Explicit Root**
 	- **Kile**: **Settings** menu > **Define Current Document as 'Master Document'**
 4. Open the documents in the `2_Contents` folder and start writing. [`Template_Documentation.pdf`](./Template_Documentation.pdf) introduces in detail the structure and settings of the template, as well as the necessary LaTeX commands to get started
-5. To compile a PDF document, you can also use the `make.bat` if you are using MS Windows on your PC. I don't use Linux so there is no `makefile`.
+5. To compile a PDF document, you can also use the `make.bat` if you are using MiKTeX on MS Windows. I don't use Linux so there is no `makefile`.
 
 
 ## Disclaimer
