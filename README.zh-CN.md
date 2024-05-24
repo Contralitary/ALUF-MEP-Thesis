@@ -4,15 +4,15 @@
 
 
 ## 简介
-这是[弗赖堡大学经济学硕士项目（MEP）](https://master.econ.uni-freiburg.de/)毕业论文的**非官方**初步 LaTeX 模板。
-我在撰写自己的毕业论文时建立了这个模板供个人使用，我认为把这个模板分享出来可能会对其他同学有所帮助。
-其布局和设计基于该[项目官方网站](https://master.econ.uni-freiburg.de/students/procedures)的 guidelines 和规定，尤其是[此文档](https://master.econ.uni-freiburg.de/data/master-thesis-guidelines-20191127.pdf)。
-由于我自己也只是刚入门 LaTeX，这个模板难免会有不完善之处。 欢迎各位 LaTeX 牛人在这里对我的模板提出修改意见，有任何问题也可以致信我的[电子邮箱](mailto:zhiyuan.qiu@outlook.com)。
+这是[弗赖堡大学经济学硕士项目（MEP）](https://master.econ.uni-freiburg.de/)毕业论文的**非官方**初步 LaTeX 模板。  
+我在撰写自己的毕业论文时建立了这个模板供个人使用，我认为把这个模板分享出来可能会对其他同学有所帮助。  
+其布局和设计基于该[项目官方网站](https://master.econ.uni-freiburg.de/students/procedures)的 guidelines 和规定，尤其是[此文档](https://master.econ.uni-freiburg.de/data/master-thesis-guidelines-20191127.pdf)。  
+由于我自己也只是刚入门 LaTeX，这个模板难免会有不完善之处。 欢迎各位 LaTeX 牛人在这里对我的模板提出修改意见，有任何问题也可以致信我的[电子邮箱](mailto:zhiyuan.qiu@outlook.com)。  
 
 ### 主要特性
-- 包含从 Title Page 一直到 Certification 的必要论文组件，组件顺序遵循学术写作惯例
-- 跨平台支持，兼容最新 MiKTeX 和 TeX Live 发行版。
-- 使用经济学文献中主流的 [APA](https://apastyle.apa.org/) 参考文献格式。 默认使用最新版本（第7版）的 APA
+- 包含从 Title Page 一直到 Certification 的必要论文组件，组件顺序遵循学术写作惯例  
+- 跨平台支持，兼容最新 MiKTeX 和 TeX Live 发行版。  
+- 使用经济学文献中主流的 [APA](https://apastyle.apa.org/) 参考文献格式。 默认使用最新版本（当前第7版）的 APA  
 
 ### 预览
 
