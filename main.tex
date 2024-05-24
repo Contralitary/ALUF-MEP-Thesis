@@ -1,0 +1,104 @@
+%% main.tex
+%% Copyright 2024 Zhiyuan Qiu
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+%   https://www.latex-project.org/lppl.txt
+% and version 1.3c or later is part of all distributions of LaTeX
+% version 2008 or later.
+%
+% This work has the LPPL maintenance status `maintained'.
+% 
+% The Current Maintainer of this work is Zhiyuan Qiu.
+%
+% This work consists of all files listed in manifest.txt.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Thesis LaTeX template for M. Sc. Economics at Uni Freiburg
+%% Recommend using XeLaTeX/LuaLaTeX Compiler for optimal document layout
+%% All document settings are placed in the '0_Preamble' folder, organized by preamble.tex
+%% This file (Main.tex) is the main file for compilation
+%% The whole layout and design of this template is based on the program regulations on:
+%% https://master.econ.uni-freiburg.de/students/procedures
+%% Check out Template_Documentation.pdf in the folder for introduction to
+%% the usage of this template
+
+%% GitHub: https://github.com/Contralitary/ALUF-MEP-Thesis/
+%% Email: zhiyuan.qiu@outlook.com
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% SET THIS DOCUMENT AS THE ROOT/MAIN DOCUMENT IN YOUR EDITOR
+
+\input{thesis_info}
+\input{preamble}    % Include all packages and define commands in setup.tex
+
+
+\begin{document}
+	
+	\ifPDFTeX
+		\hypersetup{pageanchor=false}
+	\fi
+	
+	\include{1_Title_Page/titlepage}
+	%\include{1_Title_Page/titlepage_legacy}    % For old version of titlepage
+	\newpage\thispdfpagelabel{Flyleaf}\null\thispagestyle{empty}\newpage
+	
+	\include{2_Contents/0_abstract}	% Abstract
+	
+	{% Table of Contents
+		\hypertarget{toc}{}
+		\bookmark[dest=toc,level=chapter]{\contentsname}
+		\thispdfpagelabel{Contents}
+		\hypersetup{linkcolor=}    % Remove the link color locally for ToC
+		\tableofcontents
+	}
+	
+	\include{2_Contents/Lists/0_listoftables}	% Delete if there is no table
+	\include{2_Contents/Lists/0_listoffigures}	% Delete if there is no figure
+	\include{2_Contents/Lists/0_listofacronyms}
+	\include{2_Contents/Lists/0_listofsymbols}
+	
+	\ifPDFTeX
+		\hypersetup{pageanchor=true}
+	\fi
+	
+	\include{2_Contents/1_introduction}
+	\include{2_Contents/2-background}
+	\include{2_Contents/3_chap3}
+	\include{2_Contents/4_chap4}
+	\include{2_Contents/5_discussion}
+	\include{2_Contents/6_conclusion}
+	
+	
+	
+	{
+		\pagenumbering{alph}
+		\setcounter{page}{1}
+		
+		\nocite{*}    %include all references in the bib (cited or not)
+		\newpage
+		\printbibliography
+		
+		% The commands below are only used when using the apacite package
+		%\bibliography{Bib/BibFile}
+		%\thispagestyle{empty}
+		%\newpage
+	}
+	
+	\ifPDFTeX
+		\hypersetup{pageanchor=false}
+	\fi
+	
+	\include{2_Contents/appendices}
+	\include{2_Contents/certification}
+	
+	\ifPDFTeX
+		\hypersetup{pageanchor=true}
+	\fi
+	
+	
+\end{document}

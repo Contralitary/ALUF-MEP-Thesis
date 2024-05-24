@@ -1,0 +1,66 @@
+\pagenumbering{roman}
+\setcounter{page}{1}
+\appendix
+\begingroup
+\pagestyle{empty}
+\renewcommand*{\chapterpagestyle}{empty}
+
+
+\chapter*{Appendices}
+    % Manually include the Appendices in the bib
+    \addcontentsline{toc}{chapter}{Appendices}
+\clearpage
+
+\section*{Appendix A: Tables}
+    % Manually include the section in the bib
+    \addcontentsline{toc}{section}{Appendix A: Tables}
+
+\clearpage
+
+
+\newgeometry{left   = 2.5cm,
+             top    = 2.5cm, 
+             bottom = 2.5cm,
+             right  = 2.5cm,
+            }    % Set local layouts for the appendix only
+
+
+
+
+
+
+
+
+
+
+
+\restoregeometry
+
+\section*{Appendix B: Figures}
+    % Manually include the section in the bib
+    \addcontentsline{toc}{section}{Appendix B: Figures}
+
+\clearpage
+
+
+\newgeometry{left   = 2.5cm,
+             top    = 2.5cm, 
+             bottom = 2.5cm,
+             right  = 2.5cm,
+            }    % Set local layouts for the appendix only
+
+
+
+
+
+
+
+
+
+
+
+\restoregeometry
+
+
+\clearpage    % DO NOT DELETE THIS COMMAND
+\endgroup    % DO NOT DELETE THIS COMMAND

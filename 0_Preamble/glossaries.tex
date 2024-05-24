@@ -1,0 +1,68 @@
+%% glossaries.tex
+%% Copyright 2024 Zhiyuan Qiu
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+%   https://www.latex-project.org/lppl.txt
+% and version 1.3c or later is part of all distributions of LaTeX
+% version 2008 or later.
+%
+% This work has the LPPL maintenance status `maintained'.
+% 
+% The Current Maintainer of this work is Zhiyuan Qiu.
+%
+% This work consists of all files listed in manifest.txt.
+
+
+% For using acronyms in text
+% List of Acronyms printed by 2_Contents/0_listofacronyms.tex
+% Usage: \glsxtrlong{}, \glsxtrshort{}, \glsxtrfull{}, \gls{}
+
+\usepackage[nomain,
+			acronym,
+			symbols,
+			nonumberlist,	% omit page numbers
+			nogroupskip,
+			toc,
+			automake,	% shell escape to makeglossaries, otherwise manually
+			]{glossaries-extra}
+
+% https://tex.stackexchange.com/a/266595/270290
+\setlength\glsdescwidth{\linewidth}
+\newglossarystyle{mylong}{%
+	\setglossarystyle{long}% base this style on the long style
+	\renewenvironment{theglossary}{%
+		\begin{longtable*}{lp{\glsdescwidth}}}%
+		{\end{longtable*}}%
+}
+\renewcommand{\glsnamefont}[1]{\textbf{#1}}
+\setglossarystyle{mylong}
+
+
+\makeglossaries
+%==============================================================================
+% Define your acronyms here
+% Format: \newacronym{label}{acronym}{full name}
+\newacronym{aluf}{ALUF}{Albert-Ludwigs-Universit\"{a}t Freiburg}
+\newacronym{mep}{MEP}{Master of Economics Program}
+\newacronym{apa}{APA}{American Psychological Association}
+
+
+%==============================================================================
+% Define your symbols here
+% Format: \glsxtrnewsymbol[description={description text}]{label}{\ensuremath{the symbol}}
+\glsxtrnewsymbol[description={labor}]{l}{\ensuremath{l}}
+\glsxtrnewsymbol[description={real return}]{R}{\ensuremath{R}}
+\glsxtrnewsymbol[description={consumption}]{c}{\ensuremath{c}}
+\glsxtrnewsymbol[description={time period}]{t}{\ensuremath{t}}
+\glsxtrnewsymbol[description={discount factor}]{beta}{\ensuremath{\beta}}
+\glsxtrnewsymbol[description={utility function}]{u}{\ensuremath{u}}
+
+
+
+%==============================================================================
+
+
+\glsaddall	% Print all in the lists regardless of been used or not

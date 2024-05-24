@@ -1,0 +1,141 @@
+%% layout.tex
+%% Copyright 2024 Zhiyuan Qiu
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+%   https://www.latex-project.org/lppl.txt
+% and version 1.3c or later is part of all distributions of LaTeX
+% version 2008 or later.
+%
+% This work has the LPPL maintenance status `maintained'.
+% 
+% The Current Maintainer of this work is Zhiyuan Qiu.
+%
+% This work consists of all files listed in manifest.txt.
+
+
+% ============================= Layout Setup =============================
+
+% can output horizontal pages if the content (tables for instance) is too wide
+\usepackage{pdflscape}
+
+\usepackage[left = 6cm,    % Set paper format
+            top = 1.5cm, 
+            bottom = 1.5cm,
+            right = 1.5cm,
+            includehead,
+            includefoot,
+            ]{geometry}
+    
+\usepackage[onehalfspacing]{setspace}    % 1.5 line spacing
+\setlength{\parindent}{0.5in}    % 0.5 inch paragraph indentation
+%\usepackage{indentfirst}    % uncomment if the first parindent is needed
+
+% Customize headers and footers, package tailored to KOMA
+\usepackage[automark]{scrlayer-scrpage}
+\KOMAoptions{%
+             headsepline,    % Add lines at headers
+             footsepline,    % Add lines at footers
+             autooneside=false
+             % use left and right marks with a one-sided document
+            }
+\clearpairofpagestyles
+% Show current section titles at the left headers. 
+% If there is no section title in a chapter, set it empty
+\ihead{\Ifstr{\leftmark}{\rightmark}{}{\rightmark}}
+% Showing current and total page numbers at the right headers
+\ohead{Page \pagemark \hspace{1pt} of \pageref*{TheLastPage}}
+\chead{}    % Set central headers empty
+% Set footers as 'Chapter' + 'Chap No. Chap Name' with uppercase
+\cfoot{\MakeUppercase{Chapter\space \leftmark}}
+% Set the font style for headers. Can also use \rmfamily, \sffamily, 
+% \ttfamily, \upshape, \itshape, \slshape, \scshape, \mdseries, 
+% \bfseries, \normalfont
+\addtokomafont{pagehead}{\upshape}
+% Set the font style for footers
+\addtokomafont{pagefoot}{\normalfont}
+\pagestyle{scrheadings}
+    
+% Customize headers and footers using the fancyhdr package, however not 
+% recommended as it is not fully compatible with the KOMA-Script document 
+% classes. The following commented commands can replace the ones above, 
+% nevertheless, warnings will be produced during the compilation. 
+%\usepackage{fancyhdr}
+%    \pagestyle{fancy}
+%        \cfoot{\leftmark}
+%        % Set the central footers to display chapter names
+%        \rhead{Page \thepage \hspace{1pt} of \pageref{TheLastPage}}
+%        % Show current and total page numbers at the right headers
+%    \renewcommand{\headrulewidth}{0.4pt}
+%    % Add lines at headers and footers
+%    \renewcommand{\footrulewidth}{0.4pt}
+    
+\usepackage{tocbasic}    
+% Fixing empty layouts for multiple-page ToC
+    \renewcommand*{\tableofcontents}{\listoftoc[{\contentsname}]{toc}}
+    % ToC under control of tocbasic
+    \AfterTOCHead[toc]{\thispagestyle{empty}\pagestyle{empty}}
+    \AfterStartingTOC[toc]{\clearpage}
+
+%\preto\chapterheadendvskip{    % Add a line under each chapter title
+%    \vspace*{-\parskip}%
+%    {\noindent\setlength\parfillskip{0pt plus 1fil}\rule{\textwidth}{.4pt}\par}%
+%}
+
+% https://texblog.org/2012/07/03/fancy-latex-chapter-styles/
+% https://tex.stackexchange.com/a/502318/270290
+% Customize chapter titles: 
+% adding grey vertical lines between chapter numbers and chapter names
+%\renewcommand*{\chapterformat}{\thechapter}
+%\newsavebox\chapternumberbox
+%\newsavebox\chaptertextbox
+%\let\originalchapterlinesformat\chapterlinesformat
+%\renewcommand\chapterlinesformat[3]{%
+%    \IfArgIsEmpty{#2}
+%        {\originalchapterlinesformat{#1}{#2}{#3}}
+%        {\Ifstr{#1}{chapter}
+%            {%
+%                \savebox\chapternumberbox{#2}%
+%                \savebox\chaptertextbox{%
+%                    \parbox{\dimexpr\textwidth-\wd\chapternumberbox-1em-2pt\relax}{\raggedright#3}%
+%                }%
+%                \raisebox{\dimexpr-.25\dp\strutbox}
+%                    {\usebox\chapternumberbox}%
+%                \enskip
+%                \textcolor{gray!50}{%
+%                    \rule[\dimexpr-\dp\chaptertextbox-.5ex\relax]{2pt}
+%                        {\dimexpr\ht\chaptertextbox+\dp\chaptertextbox+1ex\relax}%
+%                }%
+%                \enskip
+%                \usebox\chaptertextbox
+%                \par
+%            }
+%            {\originalchapterlinesformat{#1}{#2}{#3}}%
+%        }%
+%}
+    
+\usepackage{chngcntr}
+% continuous numbering of figures/tables over chapters
+    \counterwithout{equation}{chapter}
+    \counterwithout{figure}{chapter}
+    \counterwithout{table}{chapter}
+
+% For showing code blocks
+\usepackage{listings}
+\usepackage{scrhack}
+\lstdefinestyle{CodeListing}{
+    backgroundcolor=\color{WhiteSmoke},
+    numberstyle=\tiny\color{LightGray},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+}
+\lstset{style=CodeListing}

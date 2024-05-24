@@ -1,0 +1,85 @@
+%% titlepage_legacy.tex
+%% Copyright 2024 Zhiyuan Qiu
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+%   https://www.latex-project.org/lppl.txt
+% and version 1.3c or later is part of all distributions of LaTeX
+% version 2008 or later.
+%
+% This work has the LPPL maintenance status `maintained'.
+% 
+% The Current Maintainer of this work is Zhiyuan Qiu.
+%
+% This work consists of all files listed in manifest.txt.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Designed in the light of the ‘Master Thesis Title Page_2014’ document at: 
+%% https://master.econ.uni-freiburg.de/students/procedures
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% ================== No Changes Needed for this file! ==================
+% ================== No Changes Needed for this file! ==================
+% ================== No Changes Needed for this file! ==================
+
+\thispdfpagelabel{Title Page}
+\hypertarget{titlepage}{}
+\bookmark[dest=titlepage,level=chapter]{Title Page}
+
+\newgeometry{left=2.5cm,
+             top = 2.5cm, 
+             bottom = 2cm,
+             right= 2.5cm,
+            }    % Set local layouts for the title page only
+
+
+\begin{titlepage}
+
+    \thispagestyle{empty}
+    \renewcommand{\baselinestretch}{1.0}    % Line spacing 1.0
+    
+    \begingroup    % Set title page font to Arial
+        \myfont
+    
+            \begin{center}
+    
+                \includegraphics[width = 2.55cm]{Graphics/UniFreiburgLogos/Classic.pdf}
+                \vspace{20.8pt}
+
+                \makebox[\textwidth][s]{\bfseries \fontsize{11}{12}\selectfont A\hspace{\fill}L\hspace{\fill}B\hspace{\fill}E\hspace{\fill}R\hspace{\fill}T\hspace{\fill}–\hspace{\fill}L\hspace{\fill}U\hspace{\fill}D\hspace{\fill}W\hspace{\fill}I\hspace{\fill}G\hspace{\fill}S\hspace{\fill}–\hspace{\fill}U\hspace{\fill}N\hspace{\fill}I\hspace{\fill}V\hspace{\fill}E\hspace{\fill}R\hspace{\fill}S\hspace{\fill}I\hspace{\fill}T\hspace{\fill}\"A\hspace{\fill}T\hspace{\fill}\hspace{\fill}F\hspace{\fill}R\hspace{\fill}E\hspace{\fill}I\hspace{\fill}B\hspace{\fill}U\hspace{\fill}R\hspace{\fill}G\hspace{\fill}\hspace{\fill}I\hspace{\fill}M\hspace{\fill}\hspace{\fill}B\hspace{\fill}R\hspace{\fill}E\hspace{\fill}I\hspace{\fill}S\hspace{\fill}G\hspace{\fill}A\hspace{\fill}U}
+                \vspace{20.9pt}
+
+                {\bfseries Examination Board} \\[13.2pt]
+
+                {\bfseries Master of Science in Economics Program} \\[12.9pt]
+
+                \rule{\linewidth}{0.25mm} \\[45pt]
+
+                {\fontsize{14}{12}\selectfont \TopicTxt}\\[34pt]
+
+                {\bfseries Master Thesis} \\[92pt]
+
+            \end{center}
+
+            {\flushright{Supervisor(s): \ExaminerTxt \\[26.5pt]
+                         Name of Student: \StuNameTxt \\
+                         Matriculation Number: \StuNoTxt \\
+                         Place of Birth: \PoBTxt \\
+                         Dates: \StartTxt $-$\EndTxt
+                        }\\
+            }
+            
+    \endgroup
+    
+    \thispagestyle{empty}
+    
+\end{titlepage}
+
+
+\restoregeometry    % Restore common layouts

@@ -1,0 +1,94 @@
+%% pdf_hyperlinks.tex
+%% Copyright 2024 Zhiyuan Qiu
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+%   https://www.latex-project.org/lppl.txt
+% and version 1.3c or later is part of all distributions of LaTeX
+% version 2008 or later.
+%
+% This work has the LPPL maintenance status `maintained'.
+% 
+% The Current Maintainer of this work is Zhiyuan Qiu.
+%
+% This work consists of all files listed in manifest.txt.
+
+
+% ========================== PDF & Hyperlinks Setup ==========================
+    
+% Generate hyperlinks for ToC, citations, references, URLs, etc.
+% For more info regarding the hyperref options,
+% Please refer to the documentation:
+% http://mirrors.ctan.org/macros/latex/contrib/hyperref/doc/hyperref-doc.pdf
+
+\usepackage[
+            colorlinks    % disabling it will produce hyperlinks with boxes around (borders); text colors are set below
+           ]{hyperref}
+\usepackage[nameinlink,capitalize]{cleveref}
+
+\usepackage{bookmark}
+
+\usepackage{xurl}    % Optimize long URL line breaking
+    
+\hypersetup{
+            % Document information - customization needed 
+            pdftitle={\TopicTxt},
+            pdfauthor={\StuNameTxt},
+            pdfsubject={Master's Thesis at the University of Freiburg, author: \StuNameTxt},
+            pdfkeywords={\AbsTxt},
+            % PDF advanced setups
+            pdfdisplaydoctitle,
+            pdfpagelayout=OneColumn,
+            pdfnewwindow=true,
+            pdfstartview=FitH,
+            plainpages=false,
+            bookmarksnumbered=true,
+            bookmarksopen=true,
+            bookmarksopenlevel=2,
+            breaklinks=false,
+            citecolor=RefBlue,    % Text color of the citations
+            linkcolor=RefBlue,    % Text color of the references
+            urlcolor=RefBlue,    % Text color of the URLs
+            }
+
+
+% Capitalize the first letter when \autoref chapters and sections
+\def\chapterautorefname{Chapter}
+\def\sectionautorefname{Section}
+\def\subsectionautorefname{Subsection}
+
+
+% https://tex.stackexchange.com/a/27107/270290
+% For author-year-like citation styles:
+% Include authors' names as part of the hyperlinks of citations (clickable)
+\DeclareFieldFormat{citehyperref}{%
+    \DeclareFieldAlias{bibhyperref}{noformat}% Avoid nested links
+    \bibhyperref{#1}}
+\DeclareFieldFormat{textcitehyperref}{%
+    \DeclareFieldAlias{bibhyperref}{noformat}% Avoid nested links
+    \bibhyperref{%
+        #1%
+        \ifbool{cbx:parens}
+            {\bibcloseparen\global\boolfalse{cbx:parens}}
+            {}}}
+\savebibmacro{cite}
+\savebibmacro{textcite}
+\renewbibmacro*{cite}{%
+    \printtext[citehyperref]{%
+        \restorebibmacro{cite}%
+        \usebibmacro{cite}}}
+\renewbibmacro*{textcite}{%
+    \ifboolexpr{
+        ( not test {\iffieldundef{prenote}} and
+            test {\ifnumequal{\value{citecount}}{1}} )
+        or
+        ( not test {\iffieldundef{postnote}} and
+            test {\ifnumequal{\value{citecount}}{\value{citetotal}}} )
+    }
+    {\DeclareFieldAlias{textcitehyperref}{noformat}}
+    {}%
+    \printtext[textcitehyperref]{%
+        \restorebibmacro{textcite}%
+        \usebibmacro{textcite}}}
