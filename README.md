@@ -5,10 +5,10 @@ at the University of Freiburg
 
 
 ## Introduction
-This is a primary *unofficial* template for the Master's thesis in the [M. Sc. Economics Program](https://master.econ.uni-freiburg.de/) at the University of Freiburg. 
-I built this template for personal use during writing my own thesis and I thought it might be helpful to share it with other students in the program. 
-The layout and design are based on the guidelines and regulations of the [program's official website](https://master.econ.uni-freiburg.de/students/procedures), particularly [this document](https://master.econ.uni-freiburg.de/data/master-thesis-guidelines-20191127.pdf). 
-This is certainly a far-from-perfect template since I am a newbie at LaTeX too.  Suggestions for amendments are welcome. 
+This is a primary *unofficial* template for the Master's thesis in the [M. Sc. Economics Program](https://master.econ.uni-freiburg.de/) at the University of Freiburg.  
+I built this template for personal use during writing my own thesis and I thought it might be helpful to share it with other students in the program.  
+The layout and design are based on the guidelines and regulations of the [program's official website](https://master.econ.uni-freiburg.de/students/procedures), particularly [this document](https://master.econ.uni-freiburg.de/data/master-thesis-guidelines-20191127.pdf).  
+This is certainly a far-from-perfect template since I am a newbie at LaTeX too.  Suggestions for amendments are welcome.  
 
 ### Features
 - Contains the necessary thesis components from the title page to certification, whose order follows academic writing conventions
