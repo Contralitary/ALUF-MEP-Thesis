@@ -30,8 +30,8 @@
 ## 使用方法
 1. **下载源文件**：点击[此处](https://github.com/Contralitary/ALUF-MEP-Thesis/archive/refs/heads/main.zip)或点击文件列表上方的**Code** > **Download ZIP**
 2. 安装 LaTeX 发行套件和编辑器。  
-	 - **LaTeX 发行套件：[MiKTeX](https://miktex.org/download) 或 [TeX Live](https://tug.org/texlive/)
-	 - **编辑器：[TeXstudio](https://www.texstudio.org/) 或 [Kile](https://kile.sourceforge.io/download.php)
+	 - **LaTeX 发行套件**：[MiKTeX](https://miktex.org/download) 或 [TeX Live](https://tug.org/texlive/)
+	 - **编辑器**：[TeXstudio](https://www.texstudio.org/) 或 [Kile](https://kile.sourceforge.io/download.php)
 3. 用编辑器打开源文件中的`main.tex`，并将其设置为用于编译的根/主文件。
 	 - **TeXstudio**：**选项**菜单 > **主文档** > **将当前文档设置为主文档**
 	 - **Kile**：**设置**菜单 > **将当前文档设为“主文档”**
