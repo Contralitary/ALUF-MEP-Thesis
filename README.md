@@ -28,7 +28,7 @@ This is certainly a far-from-perfect template since I am a newbie at LaTeX too. 
 
 
 ## Usage
-1. **Download source files**: click [here](https://github.com/Contralitary/MEP-ALUF-Thesis/archive/refs/heads/main.zip) or go to **Code** > **Download ZIP** above the list of files
+1. **Download source files**: click [here](https://github.com/Contralitary/ALUF-MEP-Thesis/archive/refs/heads/main.zip) or go to **Code** > **Download ZIP** above the list of files
 2. Install a LaTeX distribution and an editor.  
 	- **LaTeX distribution**: [MiKTeX](https://miktex.org/download) or [TeX Live](https://tug.org/texlive/)
 	- **Editor**: [TeXstudio](https://www.texstudio.org/) or [Kile](https://kile.sourceforge.io/download.php)
@@ -47,4 +47,4 @@ This is certainly a far-from-perfect template since I am a newbie at LaTeX too. 
 
 
 ## License
-[LPPL-1.3c license](https://github.com/Contralitary/MEP-ALUF-Thesis/blob/main/LICENSE).
+[LPPL-1.3c license](./LICENSE).
