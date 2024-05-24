@@ -36,7 +36,7 @@
 	 - **TeXstudio**：**选项**菜单 > **主文档** > **将当前文档设置为主文档**
 	 - **Kile**：**设置**菜单 > **将当前文档设为“主文档”**
 4. 打开`2_Contents`文件夹中的章节文档，开始写作。 [`Template_Documentation.pdf`](./Template_Documentation.pdf)详细介绍了模板的结构设计和各项设定配置，以及入门所需的 LaTeX 命令
-5. 如果电脑操作系统为 MS Windows并使用MiKTeX，还可以使用 `make.bat`一键编译PDF。 我不使用 Linux 系统，所以没有编写 `makefile`。
+5. 如果电脑操作系统为 MS Windows 并使用 MiKTeX，还可以使用 `make.bat`一键编译PDF。 我不使用 Linux 系统，所以没有编写 `makefile`。
 
 
 ## 免责声明
