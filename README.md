@@ -1,7 +1,7 @@
 # MEP Thesis LaTeX Template
-at the University of Freiburg
-Last updated: May 25, 2024
-
+at the University of Freiburg  
+Last updated: May 25, 2024  
+  
 **English** · [简体中文](./README.zh-CN.md) · [Documentation](./Template_Documentation.pdf)
 
 
