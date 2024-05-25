@@ -1,6 +1,6 @@
 # 弗赖堡大学经济学硕士毕业论文LaTeX模板
-最后更新于：2024年5月25日
-
+最后更新于：2024年5月25日  
+  
 [English](./README.md) · **简体中文** · [Documentation](./Template_Documentation.pdf)
 
 
